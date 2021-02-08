@@ -429,3 +429,30 @@
 		left: 43%;
 	}
 }
+@media only screen and (min-width: 350px) {
+  .grid-container {
+    grid-template-columns: auto ;
+    padding: 10px;
+    justify-content: center;
+
+  }
+
+  .grid-item > div {
+    padding: 10px;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 620px) {
+  .grid-container {
+    grid-template-columns: auto auto auto ;
+    padding: 10px;
+
+  }
+
+  .grid-item > div {
+    padding: 10px;
+    justify-content: center;
+
+  }
+}
