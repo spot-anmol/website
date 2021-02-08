@@ -267,5 +267,15 @@ html.fp-enabled {
     border: 0
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.grid-item {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
 
 /*# sourceMappingURL=fullpage.min.css.map */
