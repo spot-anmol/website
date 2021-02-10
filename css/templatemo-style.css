@@ -802,7 +802,7 @@ textarea.form-control {
 .skill-item {
   border-bottom: 1px solid rgba(250,250,250,0.1);
   margin-bottom: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
 }
 .last-skill {
   border-bottom: none;
