@@ -256,6 +256,12 @@ html.fp-enabled {
     height: auto!important
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .fp-sr-only {
     position: absolute;
     width: 1px;
@@ -274,7 +280,8 @@ html.fp-enabled {
 }
 .grid-item {
   text-align: left;
-  margin-bottom: 10px;
+  margin-bottom: 10px
+  justify-self: center;;
 }
 
 
