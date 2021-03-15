@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Anmol Gupta Website - Docker and Databases</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="blogs/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="blogs/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="blogs.html">Blogs</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">September 16, 2020</span>
+									<h3>Docker and Databases</h3>
+									
+								</header>
+								<div class="image main"><img src="https://images.unsplash.com/photo-1533750204176-3b0d38e9ac1e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="" /></div>
+									<p>
+									These days containerisation is becoming increasingly common but is the same possible for databases? Does Docker support running a database?</p>
+									<p>
+									I am sure the same question might have crossed your minds as well, not to worry as I have summarised it already for you all.</p>
+									<p>
+									The data inside a container is ephermal which makes running stateful workloads difficult. However Docker provides tools (volume & bind mounts) that help in dealing with the state, allowing mounting a location on the host machine to a location in the container where one can store a Database.</p>
+									<p>
+									How to do it? Simple, just the following : <br>
+										&emsp; 1. docker volume create my-volume<br>
+										&emsp; 2. docker run --mount source=my-volume,target=/app<br>
+										&emsp; 3. docker run ~/nginxlogs:/var/log/nginx</p>
+									<p>
+									In AWS, it can be done with EFS (Details : https://lnkd.in/e_MENZv).
+									Though Docker provides easy scaling, easier CI/CD, codification of the infrastructure, it is not usually recommended for database workloads as the complications exceed the benefits (in production environments). At development stages the same can prove to be useful to test and try different DB variations.</p>
+									<p>
+									In summary, to save yourself from unnecessary complications, running the DB on a standard VPS or using AWS RDS would be a better choice(https://lnkd.in/eqd4rqw).</p>
+									
+							</section>
+
+					</div>
+				</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
