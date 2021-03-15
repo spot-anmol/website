@@ -52,10 +52,11 @@
 										&emsp; 2. docker run --mount source=my-volume,target=/app<br>
 										&emsp; 3. docker run ~/nginxlogs:/var/log/nginx</p>
 									<p>
-									In AWS, it can be done with EFS (Details : https://lnkd.in/e_MENZv).
+									In AWS, it can be done with EFS (<a ref="https://aws.amazon.com/blogs/compute/using-amazon-efs-to-persist-data-from-amazon-ecs-containers/" >Details</a>).
 									Though Docker provides easy scaling, easier CI/CD, codification of the infrastructure, it is not usually recommended for database workloads as the complications exceed the benefits (in production environments). At development stages the same can prove to be useful to test and try different DB variations.</p>
 									<p>
-									In summary, to save yourself from unnecessary complications, running the DB on a standard VPS or using AWS RDS would be a better choice(https://lnkd.in/eqd4rqw).</p>
+									In summary, to save yourself from unnecessary complications, running the DB on a standard VPS or using AWS RDS would be a better choice
+									<a ref="https://aws.amazon.com/rds/" >(LINK)</a>.</p>
 									
 							</section>
 
