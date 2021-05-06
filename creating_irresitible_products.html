@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Anmol Gupta Website - MUST TRY PYTHON PACKAGES</title>
+		<link rel="shortcut icon" href="images/favicon.png"/>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="blogs/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="blogs/assets/css/noscript.css" /></noscript>
+		<script
+    		src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js">
+  		</script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Website Home</a></li>
+							<li><a href="blogs.html">Blogs Home</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">August 15, 2020</span>
+									<h3>MUST TRY PYTHON PACKAGES</h3>
+									
+								</header>
+								<div class="image main"><img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=667&q=80" width="" alt="" /></div>
+								<p>Here are some MUST TRY python packages for everyone:<br />
+									<ol>
+										<li><a href="https://pypi.org/project/Pillow/">Pillow : For batch operation on images </a></li>
+										<li><a href="http://dash.plotly.com/" >Dash : For building data visualisations</a></li>
+										<li><a href="https://jmespath.org/" >JmesPath : Allows you to declaratively specify how to extract elements from a JSON document</a></li>
+										<li><a ref="https://pypi.org/project/requests/" >Requests : Makes web requests really simple</a></li>
+									</ol>
+					
+					   				 <iframe src="creating_irresistible_products.pdf" width="100%" height="500px">
+					   				 </iframe>
+							</section>
+
+					</div>
+
+					<div id="my_pdf_viewer">
+			       		<div id="canvas_container">
+			            	<canvas id="pdf_renderer"></canvas>
+			        	</div>
+			 
+			        	<div id="navigation_controls">
+			            	<button id="go_previous">Previous</button>
+			           		<input id="current_page" value="1" type="number"/>
+			            	<button id="go_next">Next</button>
+			        	</div>
+			 
+			        	<div id="zoom_controls">  
+				            <button id="zoom_in">+</button>
+				            <button id="zoom_out">-</button>
+				        </div>
+			    	</div>
+			 
+				    <script>
+				        var myState = {
+				            pdf: null,
+				            currentPage: 1,
+				            zoom: 1
+				        }
+				      
+				        pdfjsLib.getDocument('./images/creating_irresistible_products.pdf').then((pdf) => {
+				      
+				            myState.pdf = pdf;
+				            render();
+				 
+				        });
+				 
+				        function render() {
+				            myState.pdf.getPage(myState.currentPage).then((page) => {
+				          
+				                var canvas = document.getElementById("pdf_renderer");
+				                var ctx = canvas.getContext('2d');
+				      
+				                var viewport = page.getViewport(myState.zoom);
+				 
+				                canvas.width = viewport.width;
+				                canvas.height = viewport.height;
+				          
+				                page.render({
+				                    canvasContext: ctx,
+				                    viewport: viewport
+				                });
+				            });
+				        }
+				    </script>
+				</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
